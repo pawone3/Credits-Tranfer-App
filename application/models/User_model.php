@@ -5,9 +5,6 @@ class User_model extends CI_Model {
 	public function get_all_users() {
 
 		$query=$this->db->get('Users');
-		// if($query){
-		// 	echo "sucess";
-		// }
 		return $query->result();
 	}
 
@@ -20,13 +17,14 @@ class User_model extends CI_Model {
 	}
 
 	public function transfer($amount) {
-	    echo $amount;
+//	    echo $amount;
 	    $debtor_id=$this->session->userdata('debtor_id');
         $creditor_id=$this->session->userdata('creditor_id');
 
         $this->db->where('id',$creditor_id);
         $query=$this->db->get('Users');
         $row = $query->row();
+        echo $row->current_credit;
         $new_credits=$row->current_credit-$amount;
         if($new_credits<0) return false;
         $this->db->where('id',$creditor_id);
@@ -35,6 +33,7 @@ class User_model extends CI_Model {
         $this->db->where('id',$debtor_id);
         $query=$this->db->get('Users');
         $row = $query->row();
+        echo $row->current_credit;
         $new_credits=$row->current_credit+$amount;
         $this->db->where('id',$debtor_id);
         $result['a']=$this->db->update('Users', array('current_credit'=>$new_credits));

@@ -6,13 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/main.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/util.css">
+    <style>
+        .headd {
+            text-align: center;
+            color: black;
+            font-size: 30px ;
+            margin-bottom: 10px;
+        }
+    </style>
 <!--    <link rel="stylesheet" href="--><?php //echo base_url()?><!--assets/css/style.css">-->
+
 </head>
 <body>
 	
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
+                <div class="headd">
+                    Selector Debtor
+                </div>
 				<div class="table100">
 					<table>
 						<thead>

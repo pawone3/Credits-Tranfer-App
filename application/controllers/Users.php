@@ -10,6 +10,7 @@ class Users extends CI_Controller {
 
 	public function index() {
 		$this->load->view('home');
+//        $this->load->view('userr_profile');
 	}
 
 
@@ -25,12 +26,15 @@ class Users extends CI_Controller {
 	    $this->session->set_userdata('creditor_id',$user_id);
 		$ans['data']=$this->User_model->select_user($user_id);
 		// echo($data->name);	
-		$this->load->view('user_profile',$ans);
+		$this->load->view('userr_profile',$ans);
 	}
 
 
 	public function select_debtor($creditor_id) {
 
+//	    if(!$this->session->userdata('debtor_id')) {
+//            $this->session->set_userdata('creditor_id',$creditor_id);
+//        }
 		$ans['creditor_id']=$creditor_id;
 		$ans['data']=$this->User_model->get_all_users();
 		$this->load->view('select_debtor',$ans);
@@ -47,7 +51,9 @@ class Users extends CI_Controller {
             $this->load->view('home');
         }
 		else {
-            $this->load->view('select_debtor');
+//            $this->load->view('select_debtor');
+            $this->session->set_flashdata('sorry,Transanction failed');
+            $this->load->view('home');
         }
 
 	}
