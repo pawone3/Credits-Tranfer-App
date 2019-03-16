@@ -12,15 +12,16 @@ class User_model extends CI_Model {
 
 		$this->db->where('id',$user_id);	
 		$query=$this->db->get('Users');
-		// if($query)echo "jj";
 		return $query->row();
 	}
 
 	public function transfer($amount) {
 //	    echo $amount;
 	    $debtor_id=$this->session->userdata('debtor_id');
+//	    echo $debtor_id;
         $creditor_id=$this->session->userdata('creditor_id');
-
+//        echo $creditor_id;
+//        $this->load->view('test');
         $this->db->where('id',$creditor_id);
         $query=$this->db->get('Users');
         $row = $query->row();

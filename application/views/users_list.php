@@ -46,9 +46,9 @@
 								<h2><td class="column1"><?php echo $dataa->name?></td></h2>
 								<h4><td class="column2"><?php echo $dataa->username?></td></h4>
 								<td class="column3"><?php echo $dataa->current_credit?></td>
-                                <td class="column4"><a href="<?php echo base_url();?>index.php/Users/select_user/<?php echo $dataa->id?>">View Profile</a></td>
+                                <td class="column4"><a href="<?php echo base_url();?>Users/select_user/<?php echo $dataa->id?>">View Profile</a></td>
 								<td class="column5"><?php echo $dataa->email?></td>
-                                <td class="column6"><a href="<?php echo base_url();?>index.php/Users/select_debtor/<?php echo $dataa->id?>">Transfer Credits</a></td>
+                                <td class="column6"><a href="<?php echo base_url();?>Users/select_debtor/<?php echo $dataa->id?>">Transfer Credits</a></td>
 
 							</tr>
 						<?php endforeach; ?>

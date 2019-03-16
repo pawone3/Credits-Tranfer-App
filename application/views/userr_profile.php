@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="profile-userbuttons">
-                    <a href="<?php echo base_url();?>index.php/Users/select_debtor/<?php echo $data->id?>">Transfer Credits From <?php echo $data->name?> </a>
+                    <a href="<?php echo base_url();?>Users/select_debtor/<?php echo $data->id?>">Transfer Credits From <?php echo $data->name?> </a>
 <!--                    <button type="button" class="btn btn-danger btn-sm">Message</button>-->
                 </div>
             </div>

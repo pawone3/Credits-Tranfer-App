@@ -25,11 +25,12 @@
         if($this->session->flashdata('success')):
             echo $this->session->flashdata('success');
             $this->session->sess_destroy();
+            
         endif;
         ?>
     </h2></p>
   <p><h2>View your Credits, Transfer Credits and Much more..</h2></p>
-  <a href="<?php echo base_url();?>index.php/Users/view_users" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Go to Users List</a>
+  <a href="<?php echo base_url();?>Users/view_users" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Go to Users List</a>
 </div>
 
 </body>

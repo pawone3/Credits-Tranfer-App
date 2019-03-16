@@ -17,7 +17,7 @@
 			  <h1 class="user-name">Name : <?php echo $data->name?></h1>
 			   <p>Email : <?php echo $data->email?></p>
 			   <p>Current Credits : <?php echo $data->current_credit?></p>
-			   <a href="<?php echo base_url();?>index.php/Users/select_debtor/<?php echo $data->id?>">Transfer Credits</a>
+			   <a href="<?php echo base_url();?>Users/select_debtor/<?php echo $data->id?>">Transfer Credits</a>
 			</div>
 		</div>
 	</body>

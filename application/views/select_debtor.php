@@ -68,7 +68,7 @@
 		function take_input(debtor_id){
 
 			var td5=document.getElementById('td5');
-			td5.innerHTML='<form method ="post" action="<?php echo base_url();?>index.php/Users/transfer">\n' +
+			td5.innerHTML='<form method ="post" action="<?php echo base_url();?>Users/transfer">\n' +
                 '      <label for="choose"><h2>Enter Credit Amount :</h2></label>\n' +
                 '      <input class="amount" id="choose" size"20" name="amount" required>\n' +
                 '      <input id="debt" name="debtor_id" type="hidden" value="" required>\n' +
